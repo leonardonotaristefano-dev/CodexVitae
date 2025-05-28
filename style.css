@@ -1,0 +1,272 @@
+/* style.css */
+
+/* Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  background: #13294B;
+  font-family: 'Press Start 2P', monospace;
+  color: #f0f0f0;
+}
+
+/* Container generale */
+.game-cv {
+  max-width: 60%;
+  margin: 40px auto;
+  background: #58181F;
+  border: 16px solid #C2B280;
+  padding: 20px;
+}
+
+/* Spaziatura sezioni */
+section {
+  margin-bottom: 32px;
+}
+
+/* HERO */
+#hero {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero-left {
+  flex: 1 1 30%;
+  text-align: center;
+}
+.hero-left img {
+  width: 80%;
+  background-color: #a4907d;
+  border: 8px solid #C2B280;
+}
+.hero-right {
+  flex: 1 1 65%;
+  padding-left: 16px;
+}
+.bio {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+/* Statistiche HP/MANA */
+.stat {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 8px;
+  background: #4a4239;
+  border: 4px solid #5a452f;
+  padding: 0 8px;
+}
+.stat .label {
+  font-size: 0.7rem;
+}
+.stat .value {
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+.stat.hp {
+  background: #4acdf2;
+}
+.stat.mana {
+  background: #ff6ab7;
+}
+.stat-meta {
+  font-size: 0.75rem;
+  color: #c0c0c0;
+}
+
+/* Titoli di sezione */
+.section-title {
+  display: inline-block;
+  background: #C2B280;
+  padding: 6px 12px;
+  border: 4px solid #5a452f;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* CARD armi & skill */
+.weapon-card,
+.skill-card {
+  background: #a4907d;
+  border: 8px solid #C2B280;
+  padding: 12px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.weapon-card h3,
+.skill-card h4 {
+  font-size: 0.8rem;
+  margin: 8px 0;
+}
+.weapon-card i,
+.skill-card i {
+  margin-bottom: 8px;
+}
+
+.weapon-card:hover {
+  background: #9d8b7c;
+}
+
+/* Barre di progresso */
+.progress {
+  background: #4a4239;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.progress-bar {
+  width: 0; /* inizialmente a zero */
+  font-size: 0.7rem;
+  line-height: 16px;
+  color: #000;
+  background: #76c7c0;
+  transition: width 0.8s ease-out;
+}
+
+/* Log list */
+.log-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.7rem;
+  margin-top: 12px;
+}
+
+/* Trophy row */
+.trophy-row .trophy-sub {
+  font-size: 0.6rem;
+  color: #ddd;
+}
+
+/* Gutter per le grid */
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+[class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.lavoro {
+  font-size: 1.2rem;
+}
+
+/* Work Card Styling */
+.work-card {
+  background: #a4907d;
+  border: 8px solid #C2B280;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f0f0f0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  box-sizing: border-box;
+}
+.work-card i {
+  margin-bottom: 12px;
+}
+.work-card h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.work-card:hover {
+  background: #9d8b7c;
+  transform: translateY(-4px);
+}
+
+/* Equally stretch cards */
+#works .row {
+  align-items: stretch;
+}
+
+/* Languages styling */
+.languages {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+.languages .lang {
+  font-size: 1rem;
+  line-height: 1;
+}
+.languages .lang:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* TO RESPONSIVE */
+
+@media (max-width: 768px) {
+  /* Contenitore principale più fluido */
+  .game-cv {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  /* Layout HERO: impila gli elementi */
+  #hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-right {
+    padding-left: 0;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  /* Font scaling per leggibilità */
+  h1 {
+    font-size: 0.8rem;
+  }
+
+  .bio,
+  .stat .label,
+  .stat .value,
+  .stat-meta,
+  .section-title,
+  .weapon-card h3,
+  .skill-card h4,
+  .progress-bar,
+  .log-list,
+  .work-card h4 {
+    font-size: 0.6rem !important;
+  }
+
+  /* Griglie a una colonna su mobile */
+  .col-6,
+  .col-md-6,
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Icone più piccole */
+  .weapon-card i,
+  .skill-card i,
+  .work-card i {
+    font-size: 1.2rem !important;
+  }
+
+  /* Riduci padding */
+  .weapon-card,
+  .skill-card,
+  .work-card {
+    padding: 8px;
+  }
+
+  /* Sezioni log: impilamento verticale */
+  #logs .col-md-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
