@@ -23,7 +23,10 @@ Il progetto è organizzato nei seguenti file:
 
 - **index.html**: Unica page, che presenta l'introduzione con un'immagine animata rappresentativa del mio avatar e a seguire tutte le informazioni personali e professionali.
 
-![Heading della homepage](media/heading.gif)
+HEADER HOMEPAGE:
+![Header della homepage](media/header.gif)
+
+FOOTER:
 ![Footer contenente social, GitHub repositories e Human CV](media/footer.png)
 
 - **style.css**: Il file CSS che definisce lo stile del sito, inclusi colori, font e layout responsivo.
